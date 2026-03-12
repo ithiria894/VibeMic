@@ -190,10 +190,11 @@ async function stopAndTranscribe() {
       return;
     }
 
-    // Auto-copy to clipboard
+    // Auto-copy to clipboard and paste
     await vscode.env.clipboard.writeText(text);
+    await vscode.commands.executeCommand("editor.action.clipboardPasteAction");
     vscode.window.showInformationMessage(
-      `VibeMic: Copied! "${text.substring(0, 60)}${text.length > 60 ? "..." : ""}"`
+      `VibeMic: Pasted! "${text.substring(0, 60)}${text.length > 60 ? "..." : ""}"`
     );
   } catch (err: any) {
     const msg = err?.message || String(err);
