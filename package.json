@@ -1,0 +1,56 @@
+{
+  "name": "vibemic",
+  "displayName": "VibeMic",
+  "description": "Voice-to-text for vibe coding — record, edit, copy, paste into any AI chat",
+  "version": "1.0.0",
+  "publisher": "ithiria894",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": ["Other"],
+  "activationEvents": ["onStartupFinished"],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "vibemic.toggleRecording",
+        "title": "VibeMic: Toggle Voice Recording"
+      }
+    ],
+    "keybindings": [
+      {
+        "command": "vibemic.toggleRecording",
+        "key": "ctrl+shift+m",
+        "mac": "cmd+shift+m"
+      }
+    ],
+    "configuration": {
+      "title": "VibeMic",
+      "properties": {
+        "vibemic.openaiApiKey": {
+          "type": "string",
+          "default": "",
+          "description": "Your OpenAI API key for Whisper transcription"
+        },
+        "vibemic.language": {
+          "type": "string",
+          "default": "",
+          "description": "Language code for transcription (e.g. 'zh' for Chinese, 'en' for English). Leave empty for auto-detect."
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "package": "vsce package"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.3.0"
+  },
+  "dependencies": {
+    "openai": "^4.0.0"
+  }
+}
