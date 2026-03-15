@@ -4,18 +4,25 @@ Voice-to-text for vibe coding. Record your voice, auto-transcribe with OpenAI Wh
 
 ## How it works
 
-1. Click **🎤 VibeMic** in the status bar (or press `Ctrl+Shift+M` / `Cmd+Shift+M`)
-2. Speak — status bar turns red while recording
-3. Click again to stop — transcription happens automatically
-4. Text is copied to clipboard and pasted at your cursor position
+### Desktop (VS Code)
 
-No panels. No popups. No extra windows. Just talk and paste.
+1. Press `PgDn` to start recording — status bar turns red
+2. Press `PgDn` again to stop — transcription happens automatically
+3. Text is copied to clipboard and pasted at your cursor position
+
+### Mobile / Web (code-server on iPad / iPhone)
+
+1. Tap **🎤 Record** in the VibeMic panel
+2. Speak — button turns red while recording
+3. Tap **⏹ Stop** — transcription happens automatically
+4. Tap **📋 Copy** to copy to clipboard, then paste wherever you need
 
 ## Features
 
-- **One-click recording** — status bar button with visual feedback (red = recording, yellow = transcribing)
-- **Auto-paste** — transcribed text is automatically pasted at cursor position
-- **Auto-copy** — also copies to clipboard as backup
+- **One-key recording** — `PgDn` to start and stop (desktop)
+- **Auto-paste** — transcribed text is automatically pasted at cursor position (desktop)
+- **Auto-copy** — also copies to clipboard as backup (desktop)
+- **Mobile support** — works in code-server (iPad / iPhone) with a webview copy button
 - **Multi-language** — supports Cantonese, Mandarin, English, Japanese, and [97 other languages](https://platform.openai.com/docs/guides/speech-to-text/supported-languages)
 - **Cross-platform** — works on Linux and macOS
 
@@ -34,11 +41,18 @@ No panels. No popups. No extra windows. Just talk and paste.
 4. Set your **OpenAI API key**
 5. (Optional) Set **language code** (e.g. `zh` for Chinese, `en` for English, or leave empty for auto-detect)
 
-## Keybinding
+### code-server (iPad / iPhone)
 
-| Action | Linux | macOS |
-|--------|-------|-------|
-| Toggle recording | `Ctrl+Shift+M` | `Cmd+Shift+M` |
+1. Install the `.vsix` manually into code-server
+2. Open the **VibeMic** tab in the bottom panel (next to Terminal)
+3. Set your OpenAI API key in Settings
+
+## Keybindings
+
+| Action | Key |
+|--------|-----|
+| Start recording | `PgDn` |
+| Stop recording | `PgDn` |
 
 ## Why VibeMic?
 

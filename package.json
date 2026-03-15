@@ -15,15 +15,46 @@
       {
         "command": "vibemic.toggleRecording",
         "title": "VibeMic: Toggle Voice Recording"
+      },
+      {
+        "command": "vibemic.stopRecording",
+        "title": "VibeMic: Stop Recording"
+      },
+      {
+        "command": "vibemic.openPanel",
+        "title": "VibeMic: Open Panel"
       }
     ],
     "keybindings": [
       {
         "command": "vibemic.toggleRecording",
-        "key": "ctrl+shift+m",
-        "mac": "cmd+shift+m"
+        "key": "pagedown",
+        "mac": "pagedown"
+      },
+      {
+        "command": "vibemic.stopRecording",
+        "key": "pagedown",
+        "when": "vibemic.isRecording"
       }
     ],
+    "viewsContainers": {
+      "panel": [
+        {
+          "id": "vibemic-panel",
+          "title": "VibeMic",
+          "icon": "$(mic)"
+        }
+      ]
+    },
+    "views": {
+      "vibemic-panel": [
+        {
+          "type": "webview",
+          "id": "vibemic.mainView",
+          "name": "VibeMic"
+        }
+      ]
+    },
     "configuration": {
       "title": "VibeMic",
       "properties": {
