@@ -3,7 +3,7 @@
   "displayName": "VibeMic",
   "description": "Voice-to-text for vibe coding — record, edit, copy, paste into any AI chat",
   "version": "1.0.0",
-  "publisher": "ithiria894",
+  "publisher": "mcpware",
   "engines": {
     "vscode": "^1.85.0"
   },
